@@ -103,6 +103,7 @@
 
 	.article {
 		justify-content: center;
+		padding: 22px 0 60px;
 	}
 	
 	.article__content {

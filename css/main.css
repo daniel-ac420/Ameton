@@ -121,7 +121,7 @@
 
 .socials__item:hover {
 	filter: brightness(1.15) invert(0.05);
-	transform: scale(1.2);
+	transform: scale(1.2) perspective(250px) rotateX(5deg) rotateY(30deg);
 	cursor: pointer;
 }
 
