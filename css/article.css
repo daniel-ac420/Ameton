@@ -1,0 +1,149 @@
+﻿.article {
+	display: flex;
+	padding: 22px 0 80px;
+}
+
+.article__content {
+/*	flex-basis: 690px;*/
+	flex-basis: 57.5%;
+}
+
+.article__title-wrapper {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+.article__title {
+	font-family: "Museo Sans Cyrl 900", Arial, sans-serif;
+	font-weight: 900;
+	font-size: 24px;
+}
+
+.article__share {
+	width: 24px;
+	height: 24px;
+	background-image: url("../images/article/article-social-share.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.article__share:hover {
+	filter: brightness(1.15) invert(0.05);
+	transform: scale(1.15);
+}
+
+.article__text {
+	margin-bottom: 40px;
+	line-height: 1.4;
+}
+
+.article__subtext {
+	margin-bottom: 16px;
+	font-size: 13px;
+	font-weight: 700;
+}
+
+.article__buttons {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.article__button {
+	padding: 15px;
+	width: 48px;
+	height: 48px;
+	background-color: var(--colorGrayLight);
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 12px;
+}
+
+.article__button--phone {
+	background-image: url("../images/article/article-button-01-phone.svg");
+}
+
+.article__button--mail {
+	background-image: url("../images/article/article-button-02-mail.svg");
+}
+
+.article__button--chat {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	width: unset;
+	min-width: 225px;
+	color: var(--colorWhite);
+	background-color: var(--colorGreen);
+}
+
+.article button:focus {
+	outline-color: var(--colorGreen);
+}
+
+
+
+/* --- ADAPT --- */
+
+@media (max-width: 1024px) {
+	
+	.article__content {
+		flex-basis: 66%;
+	}
+
+}
+/* ↑↑↑ 1024px ↑↑↑ */
+
+
+
+@media (max-width: 534px) {
+
+	.article {
+		justify-content: center;
+	}
+	
+	.article__content {
+		flex-basis: 75%;
+	}
+	
+	.article__button--chat {
+		min-width: unset;
+	}
+	
+}
+/* ↑↑↑ 534px ↑↑↑ */
+
+
+
+@media (max-width: 480px) {
+
+	.article__buttons {
+		flex-wrap: wrap;
+	}
+	
+}
+/* ↑↑↑ 480px ↑↑↑ */
+
+
+
+@media (max-width: 375px) {
+	
+	.article__buttons {
+		justify-content: center;
+		gap: 16px;
+	}
+	
+	.article__button--chat {
+		width: 100%;
+		justify-content: center;
+	}
+	
+	.article__subtext {
+		text-align: center;
+	}
+
+}
+/* ↑↑↑ 375px ↑↑↑ */

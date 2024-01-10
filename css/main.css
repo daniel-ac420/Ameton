@@ -1,0 +1,466 @@
+﻿/* --- HEADER --- */
+
+.header {
+	margin: 40px 0 82px;
+}
+
+.banner {
+	position: relative;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 40px 54px;
+	background-color: var(--colorSky);
+	border-radius: 40px;
+}
+
+.banner::before, 
+.banner::after {
+	position: absolute;
+	content: "";
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: -1;
+}
+
+.banner::before {
+  	top: 50%;
+  	transform: translateY(-50%);
+	left: 0;
+	width: 263px;
+	height: 196px;
+	background-image: url("../images/main/header/banner-decor-element-left.svg");
+}
+
+.banner::after {
+	bottom: 0;
+	right: 0;
+	width: 277px;
+	height: 226px;
+	background-image: url("../images/main/header/banner-decor-element-right.svg");
+	border-bottom-right-radius: 40px;
+}
+
+.subtitle {
+	max-width: 535px;
+	margin-bottom: 40px;
+	text-align: center;
+	font-size: 17px;
+	font-weight: 500;
+	color: var(--colorWhite);
+}
+
+.banner-button-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+	flex-wrap: wrap;
+}
+
+.banner-button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	min-width: 160px;
+	padding: 15px 25px;
+	color: var(--colorBlack);
+	background-color: var(--colorWhite);
+	border-radius: 12px;
+}
+
+.banner-button__icon {
+	margin-left: auto;
+}
+
+.banner-button__text {
+	margin-right: auto;
+}
+
+
+
+/* --- ASIDE - SOCIALS --- */
+
+.aside-socials__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 42px 40px;
+	border-radius: 40px;
+	box-shadow: 0 20px 60px 0 rgba(26, 26, 26, 0.05); 
+}
+
+.aside__title {
+	margin-top: 16px;
+}
+
+.suptitle {
+	font-weight: 500;
+}
+
+.socials__list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 14px;
+}
+
+.socials__item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 56px;
+	height: 56px;
+	padding: 0 15px;
+	text-align: center;
+	background-color: var(--colorGrayLight);
+	border-radius: 13px;
+	transition: all 0.75s;
+}
+
+.socials__item:hover {
+	filter: brightness(1.15) invert(0.05);
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.socials__link {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.socials__link--vk {
+	width: 26px;
+	height: 14px;
+	background-image: url("../images/main/socials/socials-icon-01-vk.svg");
+}
+
+.socials__link--instagram {
+	width: 20px;
+	height: 20px;
+	background-image: url("../images/main/socials/socials-icon-02-instagram.svg");
+}
+
+.socials__link--tiktok {
+	width: 20px;
+	height: 23px;
+	background-image: url("../images/main/socials/socials-icon-03-tktk.svg");
+}
+
+.socials__link--twitter {
+	width: 24px;
+	height: 19px;
+	background-image: url("../images/main/socials/socials-icon-04-twitter.svg");
+}
+
+.socials__link--raizer {
+	width: 36px;
+	height: 36px;
+	background-image: url("../images/main/socials/socials-icon-05-raizer.svg");
+}
+
+.socials__link--facebook {
+	width: 11px;
+	height: 24px;
+	background-image: url("../images/main/socials/socials-icon-06-facebook.svg");
+}
+
+
+
+/* --- SECTION - FAQ --- */
+
+.section--faq .section__title {
+	margin-bottom: 0;
+}
+
+.faq-item {
+/*	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);*/
+}
+
+.faq-item--with-image {
+	position: relative;
+}
+
+.faq-item__inner {
+	padding: 16px;
+	min-height: 128px; /* + 2 * 16px */
+	border-radius: 16px;
+	box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05); 
+}
+
+.faq-item--with-image .faq-item__inner {
+	padding-right: 120px;
+}
+
+.faq-item:hover .faq-item__link {
+	color: var(--colorGreen);
+}
+
+.faq-item__title {
+	margin-bottom: 8px;
+	font-size: 20px;
+}
+
+.faq-item__description {
+	color: var(--colorGrayDark);
+}
+
+.faq-item--with-image::after {
+	position: absolute;
+	content: "";
+	top: 50%;
+  	transform: translateY(-90%);
+	right: 0;
+	width: 100px;
+	height: 100px;
+	background-image: url("../images/main/faq/delivery.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.swiper-wrapper {
+	padding-top: 32px;
+	height: 235px;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+	top: var(--swiper-navigation-top-offset, 45%);
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.09);
+	transition: all 0.5s;
+}
+
+.swiper-button-prev:hover, 
+.swiper-button-next:hover {
+	transform: scale(1.25);
+	filter: brightness(1.25);
+}
+
+.swiper-button-prev:after, 
+.swiper-rtl .swiper-button-next:after, 
+.swiper-button-next:after, 
+.swiper-rtl .swiper-button-prev:after {
+    content: "";
+}
+
+.faq__navigation-arrow--left {
+	transform: rotateY(180deg);
+}
+
+
+
+/* --- SECTION - TUTORIAL --- */
+
+.section--tutorial {
+	margin-top: 0;
+}
+
+.tutorial-item {
+	position: relative;
+	padding: 20px 24px;
+	margin-bottom: 12px;
+	border-radius: 16px;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	transition: all 0.75s;
+}
+
+.tutorial-item:last-child {
+	margin-bottom: 0;
+}
+
+.tutorial-item__title {
+	margin-bottom: 4px;
+	font-size: 20px;
+}
+
+.tutorial-item__description {
+	max-width: 450px;
+	font-size: 13px;
+	color: var(--colorGrayDark);
+}
+
+.tutorial-item::after {
+	position: absolute;
+	content: "";
+	top: 50%;
+  	transform: translateY(-50%);
+	right: 24px;
+	width: 7px;
+	height: 12px;
+	background-image: url("../images/main/tutorial/tutorial-arrow.svg");
+	transition: all 0.5s;
+}
+
+.tutorial-item:hover {
+	filter: brightness(1.15) invert(0.05);
+	transform: scale(1.05);
+}
+
+.tutorial-item:hover.tutorial-item::after {
+	transform: rotateZ(90deg)
+}
+
+.main {
+	margin-bottom: 80px;
+}
+
+
+
+/* --- ADAPT --- */
+
+@media (max-width: 768px) {
+	
+	.banner {
+		padding: 40px;
+	}
+	
+	.subtitle {
+		margin-bottom: 50px;
+	}
+
+	.banner-button-box {
+		gap: 16px;
+	}
+	
+	.banner-button {
+		flex-basis: 33%;
+	}
+	
+	.header {
+		margin: 40px 0 60px;
+	}
+	
+	.socials__list {
+		flex-wrap: wrap;
+	}
+	
+	.section:not(.section.section--tutorial) {
+		margin-top: 60px;
+	}
+		
+}
+/* ↑↑↑ 768px ↑↑↑ */
+
+
+
+@media (max-width: 534px) {
+
+	.header {
+		margin: 20px 0 40px;
+	}
+	
+	.banner::before {
+		transform: translateY(-100%);
+	}
+	
+	.banner-button {
+		flex-basis: 50%;
+	}
+	
+	.subtitle {
+		margin-bottom: 40px;
+	}
+	
+	.aside-socials__inner {
+		flex-direction: column;
+		gap: 20px;
+	}
+	
+	.suptitle {
+		text-align: center;
+	}
+	
+	.faq-item__inner {
+		padding: 16px 60px;
+	}
+	
+	.faq-item--with-image::after {
+		right: 40px;
+	}
+	
+	.section:not(.section.section--tutorial) {
+		margin-top: 40px;
+	}
+	
+	.tutorial-item__description {
+		max-width: 80%;
+	}
+	
+	.main {
+		margin-bottom: 60px;
+	}
+}
+/* ↑↑↑ 534px ↑↑↑ */
+
+
+
+@media (max-width: 480px) {
+
+	.banner-button {
+		flex-basis: 70%;
+	}
+	
+	.socials__list {
+		gap: 20px;
+		column-gap: 50px;
+	}
+	
+}
+/* ↑↑↑ 480px ↑↑↑ */
+
+
+
+@media (max-width: 430px) {
+
+	.banner-button {
+		flex-basis: 70%;
+	}
+	
+	.tutorial-item__title {
+		max-width: 90%;
+	}
+	
+	.socials__list {
+		column-gap: 40px;
+	}
+	
+}
+/* ↑↑↑ 430px ↑↑↑ */
+
+
+
+@media (max-width: 375px) {
+
+	.banner-button {
+		flex-basis: 80%;
+	}
+	
+	.socials__list {
+		column-gap: 50px;
+	}
+	
+}
+/* ↑↑↑ 375px ↑↑↑ */
+
+
+
+@media (max-width: 320px) {
+
+	.faq-item--with-image .faq-item__inner {
+		padding-right: 60px;
+	}
+	
+	.faq-item--with-image::after {
+		display: none;
+	}
+	
+}
+/* ↑↑↑ 320px ↑↑↑ */
